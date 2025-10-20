@@ -1,0 +1,116 @@
+/* components/Hero.module.css */
+
+.heroSection {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 90vh;
+  background-color: var(--dark-bg);
+  padding: 4rem 2rem;
+  color: var(--text-white);
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1100px;
+  width: 100%;
+  gap: 3rem;
+}
+
+.textContainer {
+  flex: 1;
+  max-width: 600px;
+}
+
+.name {
+  font-size: 3.5rem; /* 56px */
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  line-height: 1.2;
+}
+
+.tagline {
+  font-size: 1.75rem; /* 28px */
+  font-weight: 500;
+  color: var(--primary-purple);
+  margin-bottom: 1.5rem;
+}
+
+.bio {
+  font-size: 1.125rem; /* 18px */
+  color: var(--text-gray);
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+.ctaContainer {
+  display: flex;
+  gap: 1rem;
+}
+
+.ctaButton {
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  background-color: var(--primary-purple);
+  color: var(--text-white);
+  border: 2px solid var(--primary-purple);
+}
+
+.ctaButton:hover {
+  background-color: var(--light-purple);
+  border-color: var(--light-purple);
+  transform: translateY(-3px);
+  box-shadow: 0 4px 15px rgba(138, 66, 219, 0.4);
+}
+
+.secondary {
+  background-color: transparent;
+  color: var(--primary-purple);
+}
+
+.secondary:hover {
+  background-color: var(--primary-purple);
+  color: var(--text-white);
+}
+
+.imageContainer {
+  flex-shrink: 0;
+}
+
+.profileImage {
+  border-radius: 50%; /* Makes the image circular */
+  border: 5px solid var(--primary-purple);
+  object-fit: cover;
+  box-shadow: 0 0 30px rgba(138, 66, 219, 0.5);
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column-reverse; /* Stacks image on top of text */
+    text-align: center;
+  }
+
+  .ctaContainer {
+    justify-content: center;
+  }
+
+  .name {
+    font-size: 2.5rem;
+  }
+
+  .tagline {
+    font-size: 1.25rem;
+  }
+
+  .profileImage {
+    width: 250px;
+    height: 250px;
+  }
+}
